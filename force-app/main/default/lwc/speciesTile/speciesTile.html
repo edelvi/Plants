@@ -4,7 +4,7 @@
         <lightning-button
           label="View Details"
           slot="actions"
-          onclick={handleViewDetails}
+          onclick={navigateToRecordViewPage}
         ></lightning-button>
         <!-- body -->
         <p class="slds-var-p-horizontal_small description">
@@ -17,6 +17,18 @@
             alt={specie.Name}
           />
         </div>
+        <div class="slds-var-p-horizontal_small slds-align_absolute-center">
+          <template if:true={isOutdoors}>
+            <!-- sol -->
+            <lightning-icon icon-name="custom:custom3" alternative-text="Outdoors" title="Outdoors"></lightning-icon>
+          </template>
+
+          <template if:true={isIndoors}>
+            <!-- cas -->
+            <lightning-icon icon-name="standard:home" alternative-text="Indoors" title="Indoors"></lightning-icon>
+          </template>
+        </div>
+
         <!-- end body -->
       </lightning-card>
     </template>
