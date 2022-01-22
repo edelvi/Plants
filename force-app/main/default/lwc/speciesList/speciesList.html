@@ -1,4 +1,8 @@
 <template>
+
+    <div class="slds-align_absolute-center">
+      <lightning-input type="text" label="Enter some text" onchange={handleInputChange}></lightning-input>
+    </div>
     <div class="slds-align_absolute-center grid">
       <div class="slds-grid slds-wrap slds-grid_align-spread">
         <template if:true={species.data}>
